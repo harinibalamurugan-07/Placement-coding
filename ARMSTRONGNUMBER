@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<math.h>
+int main(){
+    int a;
+    printf("Enter the number:");
+    scanf("%d",&a);
+    int original=a;
+    int count=0;
+    int q=1,r,b=1;
+    int sum=0;
+    while(q!=0){
+        q=a/10;
+        a=q;
+        count++;
+    }
+    printf("count:%d\n",count);
+    a=original;
+    while(b!=0){
+      b=a/10;
+      r=a%10;
+      a=b;
+      sum=sum+pow(r,count);
+     
+    }
+     printf("sum=%d\n",sum);
+    if(sum==original){
+        printf("%d is armstrong number",original);
+    }
+}
