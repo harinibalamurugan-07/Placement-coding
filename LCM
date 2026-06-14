@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main(){
+    int a,b;
+    printf("Enter the numbers:");
+    scanf("%d %d",&a,&b);
+    int n1=a;
+    int n2=b;
+    int q,r;
+    if(a<b){
+        int temp=a;
+        a=b;
+        b=temp;
+    }
+    while(b!=0){
+        q=a/b;
+        r=a%b;
+        a=b;
+        b=r;
+    }
+    printf("%d is the GCD of numbers\n",a);
+   
+    printf("%d is the LCM of numbers",(n1*n2)/a);
+}
