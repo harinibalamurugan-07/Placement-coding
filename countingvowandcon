@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main(){
+    char s[100];
+    int l=0;
+    printf("Enter the string:");
+    scanf("%s",s);
+    while(s[l]!='\0'){
+        l++;
+    }
+    int v=0,c=0;
+    for(int i=0;i<=l-1;i++){
+        if(s[i]=='A'||s[i]=='a'||s[i]=='E'||s[i]=='e'||s[i]=='I'||s[i]=='i'||s[i]=='O'||s[i]=='o'||s[i]=='U'||s[i]=='u'){
+            v++;
+        }else{
+            c++;
+        }
+    }
+    printf("Vowels:%d,Consonants:%d",v,c);
+}
